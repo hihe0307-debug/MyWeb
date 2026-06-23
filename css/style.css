@@ -43,3 +43,31 @@ body {
   border: 1px solid #ccc;
   margin-bottom: 10px;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.gallery-item {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.filter-btn {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  background: #ea580c;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  opacity: 0.9;
+}
