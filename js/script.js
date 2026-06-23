@@ -54,3 +54,23 @@ if (searchInput && searchItems.length > 0) {
     });
   });
 }
+const filterButtons = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+if (filterButtons.length > 0 && galleryItems.length > 0) {
+  filterButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const filter = btn.dataset.filter;
+
+      galleryItems.forEach(function (item) {
+        const category = item.dataset.category;
+
+        if (filter === "all" || category === filter) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+}
