@@ -4,6 +4,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
+  transition: 0.3s;
 }
 
 h1 {
@@ -18,24 +19,30 @@ a {
   color: #ea580c;
   text-decoration: none;
 }
+
 .hidden {
   display: none;
 }
-body {
-  transition: 0.3s;
-}
 
-/* nền tối */
+/* DARK MODE */
 .dark-mode {
   background: #111827;
   color: #f8fafc;
 }
 
-/* nền ấm */
+/* đồng bộ item trong dark mode */
+.dark-mode .gallery-item {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+/* WARM MODE (giữ sáng nhưng chỉnh nhẹ) */
 .warm-mode {
   background: #fff7ed;
   color: #333;
 }
+
+/* SEARCH */
 #searchInput {
   padding: 8px;
   width: 200px;
@@ -43,9 +50,11 @@ body {
   border: 1px solid #ccc;
   margin-bottom: 10px;
 }
+
+/* GALLERY RESPONSIVE */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   margin-top: 15px;
 }
@@ -58,6 +67,7 @@ body {
   text-align: center;
 }
 
+/* BUTTON FILTER */
 .filter-btn {
   margin: 5px;
   padding: 8px 12px;
@@ -71,6 +81,8 @@ body {
 .filter-btn:hover {
   opacity: 0.9;
 }
+
+/* CONTACT */
 .contact-section {
   margin-top: 30px;
 }
