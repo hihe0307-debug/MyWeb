@@ -8,3 +8,12 @@ console.log("Chủ đề:", topic);
 console.log("Số ảnh:", imageCount);
 console.log("Đã sẵn sàng dùng JS?", isReady);
 console.log("Kiểu dữ liệu topic:", typeof topic);
+
+const mainTitle = document.getElementById("mainTitle");
+const welcomeText = document.getElementById("welcomeText");
+
+if (mainTitle && welcomeText) {
+  mainTitle.textContent = "MyWeb đã có JavaScript!";
+  welcomeText.textContent =
+    "Nội dung này được cập nhật bằng file js/script.js.";
+}
