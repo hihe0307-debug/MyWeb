@@ -71,3 +71,22 @@ body {
 .filter-btn:hover {
   opacity: 0.9;
 }
+.contact-section {
+  margin-top: 30px;
+}
+
+.contact-section input {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 250px;
+}
+
+.contact-section button {
+  padding: 8px 12px;
+  background: #ea580c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
