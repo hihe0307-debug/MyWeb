@@ -1,129 +1,5 @@
-
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyWeb</title>
-
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-<header class="site-header" id="top">
-  <div class="brand">Ẩm thực Việt Nam</div>
-
-  <button id="menuToggle">☰ Menu</button>
-
-  <nav class="main-nav">
-    <a href="#about">Giới thiệu</a>
-  </nav>
-</header>
-
-<main>
-
-  <!-- HERO -->
-  <section class="hero">
-
-    <input type="text" id="searchInput" placeholder="Tìm món ăn..." />
-
-    <select id="themeSelect">
-      <option value="">Giao diện mặc định</option>
-      <option value="dark-mode">Nền tối</option>
-      <option value="warm-mode">Nền ấm</option>
-    </select>
-
-    <h1 id="mainTitle">Ẩm thực Việt Nam</h1>
-
-    <p id="welcomeText">
-      Chào mừng bạn đến với website Ẩm thực Việt Nam.
-    </p>
-
-    <button id="helloBtn">Nhấn để xem lời chào</button>
-
-    <p id="helloResult"></p>
-
-    <p>
-      Ẩm thực Việt Nam nổi tiếng với sự đa dạng và hương vị đặc sắc.
-      Những món ăn tiêu biểu gồm phở, bánh mì, bún bò Huế và gỏi cuốn.
-    </p>
-
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about-section" id="about">
-
-    <h2>Giới thiệu chủ đề</h2>
-
-    <button id="toggleAboutBtn">
-      Ẩn/Hiện nội dung giới thiệu
-    </button>
-
-    <div id="aboutContent">
-      <p>
-        Tôi chọn chủ đề Ẩm thực Việt Nam vì đây là một nét văn hóa đặc sắc,
-        phản ánh sự đa dạng của các vùng miền trên cả nước.
-      </p>
-
-      <ul class="topic-list">
-        <li>Phở - món ăn nổi tiếng của Việt Nam.</li>
-        <li>Bánh mì - món ăn đường phố được yêu thích.</li>
-        <li>Bún bò Huế - đặc sản nổi tiếng của miền Trung.</li>
-      </ul>
-    </div>
-
-  </section>
-
-  <!-- CONTACT (CHẶNG 09) -->
-  <section class="contact-section">
-
-    <h2>Liên hệ</h2>
-
-    <form id="contactForm">
-
-      <input type="text" id="fullName" placeholder="Nhập họ tên" />
-
-      <input type="email" id="email" placeholder="Nhập email" />
-
-      <button type="submit">Gửi</button>
-
-    </form>
-
-    <p id="formMessage"></p>
-
-  </section>
-
-  <!-- GALLERY (CHẶNG 08) -->
-  <section class="gallery-section">
-
-    <h2>Thư viện món ăn</h2>
-
-    <button class="filter-btn" data-filter="all">Tất cả</button>
-    <button class="filter-btn" data-filter="food">Ẩm thực</button>
-    <button class="filter-btn" data-filter="drink">Đồ uống</button>
-<div class="gallery">
-
-  <div class="gallery-item search-item" data-category="food">
-    Phở
-  </div>
-
-  <div class="gallery-item search-item" data-category="food">
-    Bánh mì
-  </div>
-
-  <div class="gallery-item search-item" data-category="drink">
-    Trà sữa
-  </div>
-
-</div>
-  </section>
-</main>
-
-<script src="js/script.js"></script>
-
-</body>
-</html>body {
+/* Tổng thể */
+body {
   background-color: #fff7ed;
   color: #7c2d12;
   font-family: Arial, sans-serif;
@@ -132,36 +8,22 @@
   transition: 0.3s;
 }
 
-h1 {
-  color: #dc2626;
-}
-
-p {
-  font-size: 18px;
-}
-
-a {
-  color: #ea580c;
-  text-decoration: none;
-}
-
-.hidden {
-  display: none;
-}
+h1 { color: #dc2626; }
+p { font-size: 18px; }
+a { color: #ea580c; text-decoration: none; }
+.hidden { display: none; }
 
 /* DARK MODE */
 .dark-mode {
   background: #111827;
   color: #f8fafc;
 }
-
-/* đồng bộ item trong dark mode */
 .dark-mode .gallery-item {
   background: #1f2937;
   border-color: #374151;
 }
 
-/* WARM MODE (giữ sáng nhưng chỉnh nhẹ) */
+/* WARM MODE */
 .warm-mode {
   background: #fff7ed;
   color: #333;
@@ -176,14 +38,13 @@ a {
   margin-bottom: 10px;
 }
 
-/* GALLERY RESPONSIVE */
+/* GALLERY */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   margin-top: 15px;
 }
-
 .gallery-item {
   padding: 20px;
   background: #fff;
@@ -192,7 +53,7 @@ a {
   text-align: center;
 }
 
-/* BUTTON FILTER */
+/* BUTTONS */
 .filter-btn {
   margin: 5px;
   padding: 8px 12px;
@@ -202,23 +63,16 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
-
-.filter-btn:hover {
-  opacity: 0.9;
-}
+.filter-btn:hover { opacity: 0.9; }
 
 /* CONTACT */
-.contact-section {
-  margin-top: 30px;
-}
-
+.contact-section { margin-top: 30px; }
 .contact-section input {
   display: block;
   margin: 10px 0;
   padding: 8px;
   width: 250px;
 }
-
 .contact-section button {
   padding: 8px 12px;
   background: #ea580c;
