@@ -31,10 +31,11 @@ h1, h2 {
 }
 /* Ảnh trong thư viện */
 .gallery-item img{
-    width: 100%;
-    height: 220px;
+    width: 250px;
+    height: 180px;
     object-fit: cover;
     display: block;
+    margin: 0 auto;
     border-radius: 10px;
 }
 
